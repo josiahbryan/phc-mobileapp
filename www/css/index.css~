@@ -1,0 +1,286 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    /*text-transform:uppercase;*/
+    width:100%;
+}
+
+/* Portrait layout (default) */
+.app {
+	display: none;
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+
+    }
+}
+
+	.app .header.logo {
+		width: 320px;
+		margin: auto auto;
+		/*margin-top: 2em;*/
+	}
+
+	.app#login {
+		display: block;
+		/*padding: 2em;*/
+	}
+
+		.app#login .header {
+			background: #304189 url("../img/header-bluebg2.jpg");
+			height: 175px;
+			border-bottom: 2px solid white;
+			width: 100%;
+			text-align: center;
+			margin-bottom: 1em;
+			/*padding-top: 50px;*/
+		}
+
+
+	.app#login .loginform {
+		/*background: rgb(215,215,215);*/
+		/*border: 2px solid rgb(115,115,115);*/
+		/*border-radius: 5px;*/
+		padding: .25em;
+		margin: 0em;
+		width: 250px;
+		margin: auto auto;
+	}
+		.app#login .loginform td.k {
+			padding-right: .5em;
+			display: none;
+			/*background: rgba(0,0,0,0.25);*/
+		}
+		
+		.app#login .loginform input {
+			width: 14em;
+			padding: 4px 4px;
+			font-size: 12px;
+			line-height: 27px;
+			border: 1px solid rgb(100,100,100);
+			
+		}
+
+		.app#login #loginbtn {
+			margin-left: 0px;
+		}
+
+	.app#home {
+		/*display: block;*/
+	}
+
+
+		.app#home .intro {
+			width: 320px;
+			margin: auto auto;
+			font-size: 16px;
+			/*color: rgb(80,80,80);*/
+			text-align: center;
+
+			display: none;
+		}
+
+button {
+	margin: 0;
+	/*-moz-border-radius: 5px 5px 5px 5px;
+	border-radius: 4px;
+	background: #6C6C6C;
+	color: #FFFFFF;
+	display: block;
+	font-size: 1.4em;
+	margin: 3px auto;
+	padding: 6px;
+	text-align: left;
+	text-decoration: none;
+	width: 190px;*/
+
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	cursor: default;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	white-space: nowrap;
+	/*margin-right: 16px;*/
+	height: 48px;
+	line-height: 48px;
+	min-width: 72px;
+	outline: 0;
+	padding: 0 8px;
+
+	background-color: transparent;
+	background-image:         linear-gradient(top,whiteSmoke,#d4d4d4);
+	background-image:    -moz-linear-gradient(top,whiteSmoke,#d4d4d4);
+	background-image:      -o-linear-gradient(top,whiteSmoke,#d4d4d4);
+	background-image: -webkit-gradient(linear,left top,left bottom,from(whiteSmoke),to(#d4d4d4));
+	background-image: -webkit-linear-gradient(top,whiteSmoke,#d4d4d4);
+	background-image:     -ms-linear-gradient(top,whiteSmoke,#d4d4d4);
+
+	/*background: #CCC url(/theme/jquery/jquery.ui-1.8.21/css/smoothness/images/ui-bg_highlight-soft_75_cccccc_1x100.png) 50% 50% repeat-x;*/
+
+
+	/*
+	padding:5px 10px 6px;
+	color:#fff;*/
+	text-decoration:none;
+
+	/*-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-box-shadow:0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
+	*/
+
+	/*text-shadow:0 -1px 1px rgba(0,0,0,0.25);
+	border-bottom:1px solid rgba(0,0,0,0.25);*/
+
+	display: -moz-inline-box;
+	display:inline-block;
+	position:relative;
+	cursor:pointer;
+
+	/*font-size:13px;
+	font-weight:bold;
+	line-height:1;
+	border:0;
+	*/
+
+	/*border: 1px solid rgba(0, 0, 0, 0.1);*/
+	border: 1px solid #aaa;
+	/*color: #444;*/
+	color: #333;
+
+	-webkit-user-select: none; /* Safari, Chrome */
+	-khtml-user-select: none; /* Konqueror */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE */
+	user-select: none; /* CSS3 */
+
+	/*margin-bottom: 8px*/
+}
+
+ul.links
+{
+	list-style: none;
+	/*margin-top: 1.5em;*/
+	/*margin-bottom: -.5em;*/
+}
+
+
+	ul.links li
+	{
+		display: block;
+		width: 100%;
+		border-top: 1px solid rgb(180, 180, 180);
+
+	}
+
+	ul.links a
+	{
+		display: block;
+		padding: 11px 0 10px 0px;
+
+		background: url("../img/more_arrow.jpg") no-repeat scroll right center transparent;
+		color: #000000;
+		text-decoration: none;
+		padding-left: 1em;
+		/*margin-left: -5px;*/
+		/*margin-left: -.225em;*/
+		/*margin-right: -.55em;*/
+	}
+
+	ul.links li
+	{
+		background-color: #FFFFFF;
+		border-bottom: 1px solid #FFFFFF;
+		font-size: 1.5em;
+		list-style-type: none;
+		text-align: left;
+	}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
